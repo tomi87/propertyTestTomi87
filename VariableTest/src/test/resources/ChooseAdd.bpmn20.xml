@@ -19,7 +19,7 @@
 		</userTask>
 	<sequenceFlow id="flow2" name="" sourceRef="searchAPrAsAdd"targetRef="scrpt"></sequenceFlow>
 	<scriptTask id="scrpt" name="Execute script" scriptFormat="groovy">
-	     <script>execution.setVariable(execution.getVariable("stInfo");</script> 
+	     <script>execution.setVariable(execution.getVariable("stInfo"));</script> 
 	</scriptTask>
 	<sequenceFlow id="flow5" name="" sourceRef="scrpt"targetRef="theEnd"></sequenceFlow>
 		<endEvent id="theEnd"></endEvent>
