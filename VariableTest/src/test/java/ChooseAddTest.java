@@ -1,5 +1,4 @@
 
-
 import static org.junit.Assert.*;
 
 import java.util.HashMap;
@@ -30,8 +29,8 @@ public class ChooseAddTest {
 
 		
 		Map<String, Object> variables = new HashMap<String, Object>();
-		StAppInfo studentInfo = new StAppInfo();
-		variables.put("stAppInfo", studentInfo);
+		StAppInfo stInfo = new StAppInfo();
+		variables.put("stAppInfo", stInfo);
 	
 	    RuntimeService runtimeService = activitiRule.getRuntimeService();
 	    runtimeService.startProcessInstanceByKey("part1ChooseAdd", variables);
@@ -63,6 +62,7 @@ public class ChooseAddTest {
 	
 		assertEquals("stAppInfo", stAppUpdate.getVariableName());
 		StAppInfo  saii = (StAppInfo) stAppUpdate.getValue();
+		
 		//saii.getAdvisorName() is null
 		assertEquals("Bernd Hauch", saii.getAddName());
 		
